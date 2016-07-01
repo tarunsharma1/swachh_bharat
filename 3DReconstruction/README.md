@@ -101,14 +101,14 @@ And now edit “cmvs/program/main/genOption.cc” by adding this include stateme
 
 Now edit the CMVS Makefile (in cmvs/program/main) so that lines 10-17 read as follows (but be sure to replace “/home/susheel/Documents/ccbd/vsfm/” with the path to your installation):
 
-#Your INCLUDE path (e.g., -I/usr/include)
-YOUR_INCLUDE_PATH =
+    #Your INCLUDE path (e.g., -I/usr/include)
+    YOUR_INCLUDE_PATH =
 
-#Your metis directory (contains header files under graclus1.2/metisLib/)
-YOUR_INCLUDE_METIS_PATH = -I/home/susheel/Documents/ccbd/vsfm/graclus1.2/metisLib
+    #Your metis directory (contains header files under graclus1.2/metisLib/)
+    YOUR_INCLUDE_METIS_PATH = -I/home/susheel/Documents/ccbd/vsfm/graclus1.2/metisLib
 
-#Your LDLIBRARY path (e.g., -L/usr/lib)
-YOUR_LDLIB_PATH = -L//home/susheel/Documents/ccbd/vsfm/graclus1.2
+    #Your LDLIBRARY path (e.g., -L/usr/lib)
+    YOUR_LDLIB_PATH = -L//home/susheel/Documents/ccbd/vsfm/graclus1.2
 
 OK, now go ahead and build the thing, and then copy the three binaries into the VisualSFM binary directory.
 
