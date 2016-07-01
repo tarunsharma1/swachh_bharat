@@ -15,11 +15,11 @@ NVIDIA provides decent installation instructions (http://docs.nvidia.com/cuda/in
 
 Some tips for ubuntu users:
     
-    Be sure to update your Ubuntu system before installation the CUDA software because if Ubuntu pushes you new Linux kernel, you’ll need to re-install the CUDA driver from scratch. 
+1. Be sure to update your Ubuntu system before installation the CUDA software because if Ubuntu pushes you new Linux kernel, you’ll need to re-install the CUDA driver from scratch. 
     
-    Install the driver first, then the toolkit.
+2. Install the driver first, then the toolkit.
     
-    Reboot after installation.
+3. Reboot after installation.
 
 To check if CUDA driver is working use the command:
 
