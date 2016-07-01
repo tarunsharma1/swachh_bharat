@@ -1,12 +1,12 @@
 # 3D Reconstruction
 We use VisualSFM for 3D reconstruction, additionally it uses many libraries for computation.
---------------------------------------------------------------------------------------------
-1. Getting Started
 
-	$ mkdir vsfm
-	$ cd vsfm
+Getting started:
 
-2. Setup NVIDIA CUDA
+$ mkdir vsfm
+$ cd vsfm
+
+Setup NVIDIA CUDA
 
 For SIFT matching and bundle adjustment we make use of GPU acceleration. CUDA-enabled NVIDIA GPUs is thus required.
 It is also possible to set up out pipeline to use ATI/AMD GPUs via OpenCL, but it is for advanced users.
