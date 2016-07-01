@@ -34,7 +34,7 @@ This gives a response like:
 
 ##Download the Necessary Libraries:
 
-1. VisualSFM (available as a zip in this repository)
+1. VisualSFM (available in this repository)
 2. SiftGPU (available from http://www.cs.unc.edu/~ccwu/siftgpu/)
 3. Multicore Bundle Adjustment (available from http://grail.cs.washington.edu/projects/mcba/)
 4. PMVS-2 (available from http://www.di.ens.fr/pmvs/documentation.html)
