@@ -45,9 +45,10 @@ This gives a response like:
 
     $ sudo apt-get install libgtk2.0-dev libglew1.6-dev libglew1.6 libdevil-dev libboost-all-dev libatlas-cpp-0.6-dev libatlas-dev imagemagick libatlas3gf-base libcminpack-dev libgfortran3 libmetis-edf-dev libparmetis-dev freeglut3-dev libgsl0-dev 
 
-##Build VisualSFM:
+##Build VisualSFM
 
-    $ unzip VisualSFM_linux_64bit.zip 
+Download the entire vsfm folder from this repo, and place it inside vsfm folder created earlier.
+
     $ cd vsfm 
     $ make
     
