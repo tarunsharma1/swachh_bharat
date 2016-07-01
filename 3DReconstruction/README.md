@@ -3,8 +3,8 @@ We use VisualSFM for 3D reconstruction, additionally it uses many libraries for 
 --------------------------------------------------------------------------------------------
 1. Getting Started
 
-$ mkdir vsfm
-$ cd vsfm
+	$ mkdir vsfm
+	$ cd vsfm
 
 2. Setup NVIDIA CUDA
 
@@ -21,8 +21,9 @@ Some tips for ubuntu users:
 
      Reboot after installation.
 
-To check if CUDA driver is working use the command nvcc --version
-This gives a response like,
+To check if CUDA driver is working use the command:
+ nvcc --version
+ This gives a response like,
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2015 NVIDIA Corporation
 Built on Tue_Aug_11_14:27:32_CDT_2015
