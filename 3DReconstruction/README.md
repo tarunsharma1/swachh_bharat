@@ -128,6 +128,14 @@ Finally, add VisualSFM to your path and LD_LIBRARY_PATH. You can do this by addi
 
 ##Running the script for 3D Reconstruction
 
+Run the script 3dReconstruct.sh using: (The documentation for using the script is written inside the script itself)
+
+    $ sh 3dreconstruct.sh
+
+Note: For making use of this script, VisualSFM needs to installed correctly with appropriate PATH and LD_Library_PATH variables as discussed above.
+    
+
+
 
 
 
