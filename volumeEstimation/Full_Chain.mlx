@@ -1,0 +1,27 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Poisson-disk Sampling">
+  <Param tooltip="The desired number of samples. The ray of the disk is calculated according to the sampling density." type="RichInt" description="Number of samples" value="5000" name="SampleNum"/>
+  <Param tooltip="If not zero this parameter override the previous parameter to allow exact radius specification" type="RichAbsPerc" description="Explicit Radius" value="0" name="Radius" min="0" max="1.95488"/>
+  <Param tooltip="The over-sampling rate that is used to generate the intial Montecarlo samples (e.g. if this parameter is &lt;i>K&lt;/i> means that&lt;i>K&lt;/i> x &lt;i>poisson sample&lt;/i> points will be used). The generated Poisson-disk samples are a subset of these initial Montecarlo samples. Larger this number slows the process but make it a bit more accurate." type="RichInt" description="MonterCarlo OverSampling" value="20" name="MontecarloRate"/>
+  <Param tooltip="If true Poisson Disc distances are computed using an approximate geodesic distance, e.g. an euclidean distance weighted by a function of the difference between the normals of the two points." type="RichBool" description="Approximate Geodesic Distance" value="false" name="ApproximateGeodesicDistance"/>
+  <Param tooltip="If true the original vertices of the base mesh are used as base set of points. In this case the SampleNum should be obviously much smaller than the original vertex number.&lt;br>Note that this option is very useful in the case you want to subsample a dense point cloud." type="RichBool" description="Base Mesh Subsampling" value="true" name="Subsample"/>
+  <Param tooltip="If true the vertices of the below mesh are used as starting vertices, and they will utterly refined by adding more and more points until possible. " type="RichBool" description="Refine Existing Samples" value="false" name="RefineFlag"/>
+  <Param tooltip="Used only if the above option is checked. " type="RichMesh" description="Samples to be refined" value="0" name="RefineMesh"/>
+  <Param tooltip="If true it will use an heuristic for choosing the samples that at a small cost can improve the maximality of the generated sampling. It can slow a bit the process. " type="RichBool" description="Best Sample Heuristic" value="true" name="BestSampleFlag"/>
+  <Param tooltip="Used only if the Best Sample Flag is true. It control the number of attempt that it makes to get the best sample. It is reasonable that it is smaller than the Montecarlo oversampling factor." type="RichInt" description="Best Sample Pool Size" value="10" name="BestSamplePool"/>
+ </filter>
+ <filter name="Surface Reconstruction: Ball Pivoting">
+  <Param tooltip="The radius of the ball pivoting (rolling) over the set of points. Gaps that are larger than the ball radius will not be filled; similarly the small pits that are smaller than the ball radius will be filled." type="RichAbsPerc" description="Pivoting Ball radius (0 autoguess)" value="0" name="BallRadius" min="0" max="1.94866"/>
+  <Param tooltip="To avoid the creation of too small triangles, if a vertex is found too close to a previous one, it is clustered/merged with it." type="RichFloat" description="Clustering radius (% of ball radius)" value="20" name="Clustering"/>
+  <Param tooltip="If we encounter a crease angle that is too large we should stop the ball rolling" type="RichFloat" description="Angle Threshold (degrees)" value="90" name="CreaseThr"/>
+  <Param tooltip="if true all the initial faces of the mesh are deleted and the whole surface is rebuilt from scratch, other wise the current faces are used as a starting point. Useful if you run multiple times the algorithm with an incrasing ball radius." type="RichBool" description="Delete intial set of faces" value="false" name="DeleteFaces"/>
+ </filter>
+ <filter name="Close Holes">
+  <Param tooltip="The size is expressed as number of edges composing the hole boundary" type="RichInt" description="Max size to be closed " value="1000" name="MaxHoleSize"/>
+  <Param tooltip="Only the holes with at least one of the boundary faces selected are closed" type="RichBool" description="Close holes with selected faces" value="false" name="Selected"/>
+  <Param tooltip="After closing a hole the faces that have been created are left selected. Any previous selection is lost. Useful for example for smoothing the newly created holes." type="RichBool" description="Select the newly created faces" value="true" name="NewFaceSelected"/>
+  <Param tooltip="When closing an holes it tries to prevent the creation of faces that intersect faces adjacent to the boundary of the hole. It is an heuristic, non intersetcting hole filling can be NP-complete." type="RichBool" description="Prevent creation of selfIntersecting faces" value="true" name="SelfIntersection"/>
+ </filter>
+ <xmlfilter name="Compute Geometric Measures"/>
+</FilterScript>
