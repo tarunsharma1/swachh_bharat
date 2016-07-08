@@ -11,4 +11,5 @@ Once you have computed the geometry, you will obtain a bunch of values in the co
 Some useful links:
 
   https://www.youtube.com/watch?v=UQsg3-WOj9E
-  https://vimeo.com/20933872, http://www.andrewhazelden.com/blog/2012/04/automate-your-meshlab-workflow-with-mlx-filter-scripts/
+  https://vimeo.com/20933872
+  http://www.andrewhazelden.com/blog/2012/04/automate-your-meshlab-workflow-with-mlx-filter-scripts/
