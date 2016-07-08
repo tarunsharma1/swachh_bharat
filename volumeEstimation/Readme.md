@@ -1,4 +1,4 @@
-#volumeEstimation:
+VolumeEstimation:
 
 Inside this folder is the MLX script to subsample and Mesh the point clouds obtained from the 3d sfm ( structure from motion approach ). 
 This would be the last step of the pipeline. 
